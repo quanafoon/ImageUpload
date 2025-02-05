@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Upload{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+    
+    <style>
+        .container{
+            margin:0;
+        }
+        img{
+            height: 50vh;
+            width:50vw;
+        }
+    </style>
+
+    <div class="container">
+    <h2>Results: </h2>
+    {% if upload %}
+    <img src="{{upload}}" class="uploadImage">
+
+    {% else %}
+    <div class="blank">
+
+    </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

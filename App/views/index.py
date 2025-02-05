@@ -38,7 +38,7 @@ def upload_image():
         flash("file found")
         filepath = "App/uploads/" + filename
         upload = encode_image(filepath)
-        return render_template("upload.html")
+        return render_template("result.html", upload=upload)
     flash("Invalid file")
     return render_template("upload.html")
 
