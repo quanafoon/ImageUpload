@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block title %}Upload{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+    
+    <style>
+
+        .set{
+            display:flex;
+        }
+        .card{
+            margin-left:5px;
+            width:30%;
+            
+        }
+        img{
+            height:30%;
+            margin:auto;
+        }
+        
+        
+    </style>
+
+    <h2>About Us</h2>
+
+    <div class="row">
+        <div class="set">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/static/images/quan.JPG">
+                </div>
+                <div class="card-content">
+                    <p>Quan Afoon</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">            
+                    <img src="/static/images/blankScreen.png">
+                </div>
+                <div class="card-content">
+                    <p>Elijah</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="/static/images/blankScreen.png">
+                </div>
+                <div class="card-content">
+                    <p>Annika</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

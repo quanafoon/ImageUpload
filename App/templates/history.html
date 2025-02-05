@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Upload{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+    
+    <style>
+        
+    </style>
+
+    
+
+    {% if upload %}
+    <img src="{{upload}}" class="uploadImage">
+        
+    {% else %}
+    <div class="blank">
+
+    </div>
+    {% endif %}
+
+{% endblock %}

@@ -25,13 +25,13 @@ def get_user_page():
 @jwt_required()
 def identify_page():
     return render_template('message.html', title="Identify", message=f"You are logged in as {current_user.id} - {current_user.username}")
-    
+
 
 @auth_views.route('/login', methods=['POST'])
 def login_action():
     data = request.form
     token = login(data['username'], data['password'])
-    response = redirect(request.referrer)
+    response = redirect("/uploadPage")
     if not token:
         flash('Bad username or password given'), 401
     else:
@@ -41,7 +41,7 @@ def login_action():
 
 @auth_views.route('/logout', methods=['GET'])
 def logout_action():
-    response = redirect(request.referrer) 
+    response = redirect("/") 
     flash("Logged Out!")
     unset_jwt_cookies(response)
     return response
